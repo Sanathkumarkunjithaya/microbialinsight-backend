@@ -37,7 +37,7 @@ class EnsembleModel:
         xgb_pred = self.model.xgb_model.predict(scaled)
         return (rf_pred + xgb_pred) / 2  # Ensemble average
 
-ensemble_model = EnsembleModel("ensemble_model.pkl")
+ensemble_model = EnsembleModel("model/ensemble_model.pkl")
 
 # Input model for prediction
 class PredictionRequest(BaseModel):
